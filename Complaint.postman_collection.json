@@ -1,0 +1,412 @@
+{
+	"info": {
+		"_postman_id": "abd550e0-5e29-4381-96a0-c577105ebd9c",
+		"name": "Complaint",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29917370"
+	},
+	"item": [
+		{
+			"name": "Sign Up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"raed@gmail.com\",\r\n    \"firstName\":\"Raed\",\r\n    \"lastName\":\"Masri\",\r\n    \"password\":\"Ra2d1999\",\r\n    \"isAdmin\":true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/user/sign-up",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"sign-up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sign In",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"raed@gmail.com\",\r\n    \"password\":\"Ra2d1999\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/user/sign-in",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"sign-in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reset Password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"raed@gmail.com\",\r\n    \"password\":\"Ra2d1999\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/user/reset-password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"reset-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit Complaint Category",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"CG two\",\r\n    \"description\": \"CG description\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/complaint-category",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"complaint-category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit Complaint",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"C two\",\r\n    \"description\": \"C description\",\r\n    \"categories\": [\r\n        \"65f6b9f9d19e15539145697f\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/complaint",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"complaint"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Complaint Category",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"CG one\",\r\n    \"description\": \"CG description\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/complaint-category/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"complaint-category",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "65f6b9f9d19e15539145697f"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Complaint",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\": \"INPROGRESS\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/complaint/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"complaint",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "65f6bf3fd8110fe80bcaacfd"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verify OTP",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/user/verify-otp/:otp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"verify-otp",
+						":otp"
+					],
+					"variable": [
+						{
+							"key": "otp",
+							"value": "656712"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Complaint  Category",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/complaint-category/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"complaint-category",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "65f6b8fb342999528bc725e4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Complaint",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/complaint/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"complaint",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "65f6bf3fd8110fe80bcaacfd"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Complaint  Category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/complaint-category/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"complaint-category",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "65f6b9f9d19e15539145697f"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Complaint",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/complaint/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"complaint",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "65f6c16d1b9174de0430ee65"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Complaint Paginated",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/complaint?page=1&limit=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"complaint"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Complaint Category Paginated",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/complaint-category?page=1&limit=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"complaint-category"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
